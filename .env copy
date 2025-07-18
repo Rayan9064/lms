@@ -1,0 +1,52 @@
+# Firebase Configuration
+NEXT_PUBLIC_FIREBASE_API_KEY=AIzaSyCbGN2PNYmKcklpwXYxMX9_ES22C4s8isg
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=cloudinstitution-lms.firebaseapp.com
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=cloudinstitution-lms
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=cloudinstitution-lms.firebasestorage.app
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=991104120127
+NEXT_PUBLIC_FIREBASE_APP_ID=1:991104120127:web:1846ab59d78d60268e8f8a
+NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=G-QKBZWE3XB5
+
+# Firebase Admin SDK Configuration (for server-side operations)
+# You need to get these values from your service account private key JSON file
+FIREBASE_PROJECT_ID=cloudinstitution-lms
+FIREBASE_CLIENT_EMAIL=firebase-adminsdk-fbsvc@cloudinstitution-lms.iam.gserviceaccount.com
+FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCFfaFQC1FvK/wt\nkzqi0bNDWdN1SjBwODp5iLfBfalUXjAYX6sHzsOCPg5WtR4JCMKybSKx6fJAKqs8\nIGf4cLPDr80cWkovoBeg344mfpnbao03UMZXk1XGHIDBFJAPdwad3Vgk25WwMJq7\nNutWF0y80HoLqFlMJ6E8Hgc3DlDZX9Q7VL+JxNQJ5Ss13OA9FuA5cKpdKzIQdnwX\n/RBJ6BYS9HkN5oFmVGKobTZx7ZsjqV+XXy+AbzV2Dg+peiyGj+5bgH0rMcOBnGkK\nubW9ex4V02bGlupYa03Nnq9HinqkxyGZ//08PncPXqIdsvK63kvUY3mrKKgP49mV\nmzkjCN5fAgMBAAECggEANgTbOPGDkDnb8DNymH3EjZ41eHK/vEG8w/6j4axwz9/X\nlZ1tMBknO7bSBZuAXoaJhzurvRRfQEEkDw5MFJjC3g7vsSgGelROC3873m7/4u8w\n2zAYO0s3fBZ/seKY03FGn655I10qq2RX0SfNvwZpusSghsQm8q7cy9+Y6tojtHrB\n4Vcs1rXW3BmM3e08uuJJfOquNxda9pYcLWt/xxDgchdFrJa9i3NU950nPGoRaScL\nTyiNnNOrc05WtN0DW7ut2xqJBTj4TUUEcWYCOmjMKxYQrT7uhXDqDw+l7khMRITd\nMgbRy/bdumyxIlIAw9NLGRPDjXm807Lj7qDZu7M85QKBgQC5NT+nWW4m7MAw7GdD\n4QX+0LzvaOxH2lzPMPNL1yvsrejPNdLAFGy5pyRXZKinDABrDhiO4VUCLsbLtnN1\n7SkUg5yROc5CzFEjZ6kgbfnuKcvnxiPAeex4ZndzGJkW2PUlVf65NWP3NYI8vKzQ\nWVQbRYSALoYJw2d6jLedwgaAEwKBgQC4g85im+npUJcqx1AkOSHDwhOlKPbmGYlg\nVxPpIikiHx4mqsvTQNIJ1/HlK87nqEfCrBNx8PEa7eAKutCxhjTi+iFXiCIpd7rB\nmbdmFt2uPbg4EvGb+PqUPvxKFFPgw7ciPv60X87u8YzId0v2btdIi/xxklKQWJpb\nUrAMGa3qBQKBgFPNak34w0TNn3EDpv4p1aKlJLhXi4I/pfsCNTQ92lwvnMYVnpTX\nKRMgM+tvWnirj4zhRe9wuhxQuhb3KWtUsl/b5X4438GN3bDdeMN5v7sqIl9vYkH3\naS5ZfvcPTEXwSYxpSubW57K1/YYqATANG2dzny643mGQj0P+ZB736iUNAoGAV7wE\nlIrCTHhPiL3A85he37AWmz/BNmQKGE8PXpkpqdnWAljQFiEKPjf6Axgzh59Sj9Q2\nYsVIP5/AGhn+RYsk9pAs7mwComkV2hx3Qgm5WrJqN+96Bsn6jCbu22KTB5rIJ3aA\nsc+km6UrZd6jtge6QfqeDHqg25Xlv2qv3vEO6ukCgYAdvLMWFsHOLUkALo5LftzE\n7fynoLIJ4ZTn0ER1tc3+jBGg1L9PbmP7RFWrI+MAodLlSQXDQYiGIj+ELly+i15d\nDyM0rqjSvsRfgURmRF+uebrTu6osZfBGtU6SyurBmydwjgsY6tzTB260svKgeM2G\nlw6IsdpabEOZU+ievZuZhw==\n-----END PRIVATE KEY-----\n"
+
+# NEXT_PUBLIC_FIREBASE_API_KEY=AIzaSyBINi3FAULAkmL7lPg6ENyhcaSzI6MRTSo
+# NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=lms12-feae0.firebaseapp.com
+# NEXT_PUBLIC_FIREBASE_PROJECT_ID=lms12-feae0
+# NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=lms12-feae0.appspot.com
+# NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=799740847882
+# NEXT_PUBLIC_FIREBASE_APP_ID=1:799740847882:web:7c4e1a267cb8e813373cf3
+# NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=G-NMZMTP7WHR
+
+
+# Site Configuration
+NEXT_PUBLIC_SITE_URL=https://www.cloudinstitution.in
+
+# Email Configuration (Choose one option)
+
+# Option 1: Resend Email Service (Recommended for Production)
+# Sign up at https://resend.com and get your API key
+RESEND_API_KEY=re_DZBe7DBb_5KxX4YATChkDhuXutp7BwGfJ
+
+# Option 2: Gmail SMTP (Backup/Development)
+# Uncomment and configure these for Gmail:
+GMAIL_USER=cloudinstitution@gmail.com
+GMAIL_APP_PASSWORD=aavimgofeegptalb
+NEXT_PUBLIC_GOOGLE_SHEETS_URL=https://script.google.com/macros/s/AKfycbyseaQHdVO4fP6xMOfNrxT01EDWNmtLyjQSKQwTr9BGCt7nUlTcBflWddK98803fhBx0g/exec
+
+# Option 2: Custom SMTP Server (Production)
+# Uncomment and configure these for custom SMTP:
+# SMTP_HOST=smtp.your-provider.com
+# SMTP_PORT=587
+# SMTP_SECURE=false
+# SMTP_USER=your-username
+# SMTP_PASSWORD=your-password
+
+# Common SMTP Examples:
+# SendGrid: smtp.sendgrid.net:587
+# Mailgun: smtp.mailgun.org:587
+# Office 365: smtp.office365.com:587
+# Yahoo: smtp.mail.yahoo.com:587
