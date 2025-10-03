@@ -65,165 +65,69 @@ A comprehensive Learning Management System (LMS) built with Next.js, featuring c
 ```
 lmsportal/
 ├── app/                    # Next.js App Router
-│   ├── (routes)/          # Route groups
-│   ├── admin/             # Admin dashboard
-│   ├── student/           # Student portal
-│   ├── api/               # API endpoints
-│   └── globals.css        # Global styles
-├── components/            # Reusable UI components
-│   ├── home/             # Homepage modular components
-│   ├── ui/               # Base UI components
-│   └── forms/            # Form components
-├── lib/                  # Utility functions
-├── hooks/                # Custom React hooks
-├── types/                # TypeScript definitions
-└── public/               # Static assets
-```
+# Cloud Institution — LMS (portfolio)
 
-## 🚀 Getting Started
+Live product: https://www.cloudinstitution.in/
 
-### Prerequisites
-- Node.js 18+ and npm/yarn
-- Firebase project setup
-- Judge0 API access (for code execution)
+Overview
+- This is the Learning Management System (LMS) I built with a teammate during a 2‑month internship at Cloud Institution. The system is production-ready and used by teachers and students for course delivery, attendance management, assessments (including auto-graded programming challenges), and reporting.
 
-### Installation
+My role & contributions
+- Frontend lead (Next.js + TypeScript): majority of UI, layouts, responsive design, and theme system.
+- Implemented the Monaco-based programming editor, integrated Judge0 for secure code execution, and built the auto-grading flow.
+- Built the QR-based attendance flow (scanner, mobile view, and Excel export pipelines).
+- Created core reusable components and layout system (`components/`), and coordinated integration with Firebase (`lib/firebase.ts`, `lib/firebase-admin-client.ts`).
+- Improvements: homepage redesign (infinite carousels, modular sections) and performance optimizations.
 
-1. **Clone the repository**
-```bash
-git clone <repository-url>
-cd lmsportal
-```
+Key highlights (what makes this project notable)
+- Production usage: real teachers and students use the product for day-to-day classes and assessments.
+- Programming assessment: live code execution with Judge0, multi-language support, and instant feedback.
+- Attendance: mobile-first QR scanning and exportable reports (Excel/XLSX).
+- Reusable architecture: component-driven UI, App Router structure, and clear separation of services in `lib/`.
 
-2. **Install dependencies**
-```bash
-npm install
-# or
-yarn install
-```
+Selected screenshots (placeholders)
+- `docs/screenshots/home.png` — Homepage (hero & course showcase)
+- `docs/screenshots/admin-dashboard.png` — Admin dashboard with analytics
+- `docs/screenshots/student-dashboard.png` — Student dashboard and progress
+- `docs/screenshots/programming-editor.png` — Monaco editor with Judge0 results
+- `docs/screenshots/attendance-qr.png` — QR attendance flow (mobile)
 
-3. **Environment Setup**
-Create `.env.local` file with:
-```bash
-# Firebase Configuration
-NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_auth_domain
-NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
-# ... other Firebase config
+Architecture & notable files
+- Frontend: `app/` (Next.js App Router), `components/` (layouts & UI primitives)
+- Services: `lib/` (Firebase clients, Judge0 wrapper, domain services)
+- API: `api/` route handlers for secure server-side operations
+- Hooks: `hooks/` (attendance polling, toasts, mobile helpers)
 
-# Judge0 Configuration
-JUDGE0_API_URL=your_judge0_url
-JUDGE0_API_KEY=your_judge0_key
-```
+Technical stack (short)
+- Next.js (App Router), React, TypeScript, Tailwind CSS
+- Firebase (Auth, Firestore, Admin SDK)
+- Judge0 for code execution, Monaco editor for in-browser editing
+- Excel/XLSX for exports, Framer Motion, Radix UI
 
-4. **Run development server**
-```bash
-npm run dev
-# or
-yarn dev
-```
+Metrics and impact (if available)
+- Used by 100s of students and teachers (internal counts) — include any concrete numbers you have here (user counts, courses created, assessments graded) to strengthen the narrative.
 
-5. **Open your browser**
-Navigate to [http://localhost:3000](http://localhost:3000)
+Challenges & what I learned
+- Securely integrating remote code execution (Judge0) without exposing secrets.
+- Designing a performant, responsive editor experience with Monaco inside Next.js.
+- Producing reliable attendance exports and ensuring offline/mobile scanning resilience.
 
-## 📱 User Roles & Access
+How to present this project in an interview/portfolio
+1. Start with the live URL and a 45–60s walkthrough video or screenshots.
+2. Describe your responsibilities and show 2–3 concrete contributions (e.g., Monaco integration, QR attendance, export pipeline).
+3. Discuss a technical challenge and your solution (security, scaling, data consistency).
+4. Mention metrics and user feedback (adoption, time saved, or other impact).
 
-### 🔐 Admin Dashboard
-- Course management and creation
-- Student and teacher management
-- System analytics and reports
-- Attendance tracking
-- Assessment management
+Pointers for reviewers (where to look in the code)
+- UI & layouts: `components/` and `app/` (layout files)
+- Code execution: `lib/judge0.ts`, `lib/judge0-wrapper.ts`, `components/monaco-editor.tsx`
+- Attendance: `lib/attendance-service.ts`, `lib/attendance-export.ts`, `components/student-qr-code.tsx`
 
-### 👨‍🏫 Teacher Portal
-- Course content creation
-- Student progress monitoring
-- Assignment grading
-- Attendance management
+Permissions & notes
+- This project was built during an internship at Cloud Institution. Before publishing or reusing code publicly, confirm permissions with Cloud Institution.
 
-### 👨‍🎓 Student Portal
-- Course enrollment and access
-- Assignment submission
-- Progress tracking
-- QR code attendance
-- Programming challenges
-
-## 🎨 Homepage Features
-
-### Hero Section
-- 6-slide infinite carousel
-- Real course images with glow effects
-- Responsive CTAs with contact info
-
-### Course Showcase
-- Featured courses grid
-- Interactive hover effects
-- Star ratings and student counts
-
-### Testimonials
-- Infinite horizontal scroll
-- Student success stories
-- Professional company affiliations
-
-### Hiring Partners
-- 300+ partner companies
-- Dual-row infinite scroll
-- Major tech company logos
-
-## 📊 Analytics & Reporting
-
-- **Student Performance**: Individual and class-wide analytics
-- **Course Analytics**: Completion rates, engagement metrics
-- **Attendance Reports**: Daily, weekly, monthly summaries
-- **Export Capabilities**: Excel, CSV, PDF formats
-
-## 🔧 Development
-
-### Code Quality
-- **TypeScript**: Type-safe development
-- **ESLint**: Code linting and formatting
-- **Prettier**: Code formatting
-- **Husky**: Git hooks for quality assurance
-
-### Testing
-```bash
-npm run test        # Run tests
-npm run test:watch  # Watch mode
-npm run test:coverage # Coverage report
-```
-
-### Build & Deployment
-```bash
-npm run build       # Production build
-npm run start       # Production server
-npm run lint        # Lint checking
-```
-
-## 📝 Documentation
-
-- 📋 **[Homepage Improvements](./HOMEPAGE_IMPROVEMENTS.md)** - Complete redesign documentation
-- 📋 **[GitHub Issue #28 Summary](./GITHUB_COMMENT_ISSUE_28.md)** - Ready-to-post issue comment
-- 📋 **[Attendance System](./docs/NEW_ATTENDANCE_SYSTEM.md)** - QR code attendance documentation
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is part of the Cloud Institution internship program.
-
-## 📞 Support
-
-For support and queries:
-- 📧 Email: support@cloudinstitution.com
-- 📱 Phone: +91 9346 936 936 / +91 9346 936 937
-- 🌐 Website: [cloudinstitution.com](https://cloudinstitution.com)
+If you want, I can now:
+- Update each per-folder README with curated examples of files I worked on (I can mark the most important files and add short explanations).
+- Generate a compact one-page portfolio blurb (suitable for LinkedIn/GitHub projects) and a small set of captions for each screenshot.
 
 ---
-
-**Built with ❤️ by the Cloud Institution Team**
