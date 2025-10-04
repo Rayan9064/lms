@@ -2,15 +2,6 @@
 
 A comprehensive Learning Management System (LMS) built with Next.js, featuring course management, student tracking, assessments, programming environments, and more.
 
-## 🌟 Recent Updates - Homepage Redesign (Issue #28)
-
-✨ **Complete homepage overhaul** with modern design, infinite carousels, and modular architecture
-📄 **New pages added**: About and Contact pages
-🏗️ **Modular components**: Split into reusable React components
-📱 **Responsive design**: Optimized for all devices with dark mode support
-
-👉 **[View Complete Homepage Improvements Documentation](./HOMEPAGE_IMPROVEMENTS.md)**
-
 ## 🚀 Features
 
 ### 📚 Course Management
@@ -65,69 +56,53 @@ A comprehensive Learning Management System (LMS) built with Next.js, featuring c
 ```
 lmsportal/
 ├── app/                    # Next.js App Router
+```
+
+
 # Cloud Institution — LMS (portfolio)
 
-Live product: https://www.cloudinstitution.in/
+[![Live Site](https://img.shields.io/badge/live-cloudinstitution.in-007ACC)](https://www.cloudinstitution.in/) [![Tech: Next.js](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org/) [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/) [![License](https://img.shields.io/badge/license-Check%20with%20Cloud%20Institution-lightgrey)](#)
 
-Overview
-- This is the Learning Management System (LMS) I built with a teammate during a 2‑month internship at Cloud Institution. The system is production-ready and used by teachers and students for course delivery, attendance management, assessments (including auto-graded programming challenges), and reporting.
+🚀 Live product: https://www.cloudinstitution.in/
+
+One-line summary
+- Frontend lead on a production LMS used by teachers and students — Monaco-based programming assessments, Judge0 auto-grading, and QR attendance with Excel exports.
+
+Hero highlights
+- Production-ready: real users (teachers & students)
+- Programming assessment: in-browser coding + Judge0 auto-grading
+- Attendance: mobile-first QR scanning + exportable Excel reports
 
 My role & contributions
-- Frontend lead (Next.js + TypeScript): majority of UI, layouts, responsive design, and theme system.
-- Implemented the Monaco-based programming editor, integrated Judge0 for secure code execution, and built the auto-grading flow.
-- Built the QR-based attendance flow (scanner, mobile view, and Excel export pipelines).
-- Created core reusable components and layout system (`components/`), and coordinated integration with Firebase (`lib/firebase.ts`, `lib/firebase-admin-client.ts`).
-- Improvements: homepage redesign (infinite carousels, modular sections) and performance optimizations.
+- Frontend lead (Next.js + TypeScript): UI, layouts, theme system, and performance tuning.
+- Monaco editor integration (`components/monaco-editor.tsx`, `CodeEditor.tsx`) and Judge0 wiring (`lib/judge0.ts`, `lib/judge0-wrapper.ts`).
+- QR attendance flow and export pipeline (`components/student-qr-code.tsx`, `lib/attendance-export.ts`, `lib/attendance-excel-export.ts`).
+- Reusable components and layout system (`components/main-layout.tsx`, `components/admin-layout.tsx`).
 
-Key highlights (what makes this project notable)
-- Production usage: real teachers and students use the product for day-to-day classes and assessments.
-- Programming assessment: live code execution with Judge0, multi-language support, and instant feedback.
-- Attendance: mobile-first QR scanning and exportable reports (Excel/XLSX).
-- Reusable architecture: component-driven UI, App Router structure, and clear separation of services in `lib/`.
+Screenshots (place files under `docs/screenshots/`)
 
-Selected screenshots (placeholders)
-- `docs/screenshots/home.png` — Homepage (hero & course showcase)
-- `docs/screenshots/admin-dashboard.png` — Admin dashboard with analytics
-- `docs/screenshots/student-dashboard.png` — Student dashboard and progress
-- `docs/screenshots/programming-editor.png` — Monaco editor with Judge0 results
-- `docs/screenshots/attendance-qr.png` — QR attendance flow (mobile)
+| Preview | Filename |
+|--------:|:--------|
+| ![home](docs/screenshots/home.png) | `docs/screenshots/home.png` — Homepage (hero & course showcase) |
+| ![admin](docs/screenshots/admin-dashboard.png) | `docs/screenshots/admin-dashboard.png` — Admin dashboard with analytics |
+| ![student](docs/screenshots/student-dashboard.png) | `docs/screenshots/student-dashboard.png` — Student dashboard and progress |
+| ![editor](docs/screenshots/programming-editor.png) | `docs/screenshots/programming-editor.png` — Monaco editor with Judge0 results |
+| ![qr](docs/screenshots/attendance-qr.png) | `docs/screenshots/attendance-qr.png` — QR attendance flow (mobile) |
 
-Architecture & notable files
-- Frontend: `app/` (Next.js App Router), `components/` (layouts & UI primitives)
-- Services: `lib/` (Firebase clients, Judge0 wrapper, domain services)
-- API: `api/` route handlers for secure server-side operations
-- Hooks: `hooks/` (attendance polling, toasts, mobile helpers)
+Key features
+- 📚 Course management: content CRUD with progress tracking
+- 👥 Multi-role system: Admin, Teacher, Student
+- 🧪 Programming assessments: Monaco editor + Judge0 + auto-grading
+- 📊 Analytics & exports: dashboards and Excel/XLSX export pipelines
+- 📱 QR attendance: mobile-friendly scanning and exportable reports
 
-Technical stack (short)
-- Next.js (App Router), React, TypeScript, Tailwind CSS
-- Firebase (Auth, Firestore, Admin SDK)
-- Judge0 for code execution, Monaco editor for in-browser editing
-- Excel/XLSX for exports, Framer Motion, Radix UI
+Architecture & where to look
+- Frontend: `app/`, `components/` (layouts & UI primitives)
+- Services: `lib/` (`firebase.ts`, `firebase-admin-client.ts`, `judge0.ts`)
+- API: `api/` route handlers (Judge0 proxy, export endpoints)
+- Hooks: `hooks/` (`use-attendance.ts`, `use-toast.ts`)
 
-Metrics and impact (if available)
-- Used by 100s of students and teachers (internal counts) — include any concrete numbers you have here (user counts, courses created, assessments graded) to strengthen the narrative.
+Notes & permissions
+- Built during a 2‑month internship at Cloud Institution. Confirm permissions before publishing or reusing code publicly.
 
-Challenges & what I learned
-- Securely integrating remote code execution (Judge0) without exposing secrets.
-- Designing a performant, responsive editor experience with Monaco inside Next.js.
-- Producing reliable attendance exports and ensuring offline/mobile scanning resilience.
-
-How to present this project in an interview/portfolio
-1. Start with the live URL and a 45–60s walkthrough video or screenshots.
-2. Describe your responsibilities and show 2–3 concrete contributions (e.g., Monaco integration, QR attendance, export pipeline).
-3. Discuss a technical challenge and your solution (security, scaling, data consistency).
-4. Mention metrics and user feedback (adoption, time saved, or other impact).
-
-Pointers for reviewers (where to look in the code)
-- UI & layouts: `components/` and `app/` (layout files)
-- Code execution: `lib/judge0.ts`, `lib/judge0-wrapper.ts`, `components/monaco-editor.tsx`
-- Attendance: `lib/attendance-service.ts`, `lib/attendance-export.ts`, `components/student-qr-code.tsx`
-
-Permissions & notes
-- This project was built during an internship at Cloud Institution. Before publishing or reusing code publicly, confirm permissions with Cloud Institution.
-
-If you want, I can now:
-- Update each per-folder README with curated examples of files I worked on (I can mark the most important files and add short explanations).
-- Generate a compact one-page portfolio blurb (suitable for LinkedIn/GitHub projects) and a small set of captions for each screenshot.
-
----
+----
